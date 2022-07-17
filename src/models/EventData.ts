@@ -1,5 +1,6 @@
 export default interface IEventData {
-    event_name: string      //  Event Name:     // 255 chars
+    id: number
+    ,event_name: string      //  Event Name:     // 255 chars
     ,venue: string          //  Venue:          // ?? Autofill "formtastic" in CSS class
     ,when_start_date: Date  //  When            //
     ,when_start_time: Date  //  When            //
@@ -13,7 +14,8 @@ export default interface IEventData {
 
 export function createEvent (
   data : IEventData = {
-    event_name: "Event Name"       
+    id: 0
+    ,event_name: "Event Name"       
     ,venue: "Venue Name"           
     ,when_start_date: new Date()     
     ,when_start_time: new Date()     
