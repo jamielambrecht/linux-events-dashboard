@@ -1,16 +1,7 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  background-color: #ffeaf5;
+  height: 100vh;
 }
 
 .App-header {
@@ -24,15 +15,68 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.Button-container {
+  margin-top: 16px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Events-display-container {  
+  margin-right: 2%;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.Events-input-container {
+  margin-left: 2%;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.Main-body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.Main-right {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.Main-left {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.Event-time-label {
+  color: #000000;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+}
+
+.Form-container {
+  margin: 10px;
+}
+
+.Table-container {
+  margin: 10px;
+}
+
+.Text-input {
+  background-color: white;
+  margin-bottom: 5;
 }

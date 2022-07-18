@@ -56,25 +56,27 @@ export default function DenseTable(props : {data: IEventData[]}) {
   ];
 
   return (
-    <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
-        <TableHead>
-          <TableRow>
-            {columns.map(column => <TableCell {...column.headerProps}>{column.label}</TableCell>)}
-          </TableRow>
-        </TableHead>
-        <TableBody>
-        {props.data.map((event : IEventData, index: number) => (
-          <TableRow
-            key={event.event_name}
-            sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-          >
-            {columns.map(column => <TableCell {...column.cellProps}>{column.displayData[index]}</TableCell>)}
-          </TableRow>
-        ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
+    <div className="Table-container">
+      <TableContainer component={Paper}>
+        <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
+          <TableHead>
+            <TableRow>
+              {columns.map(column => <TableCell {...column.headerProps}>{column.label}</TableCell>)}
+            </TableRow>
+          </TableHead>
+          <TableBody>
+          {props.data.map((event : IEventData, index: number) => (
+            <TableRow
+              key={event.event_name}
+              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+            >
+              {columns.map(column => <TableCell {...column.cellProps}>{column.displayData[index]}</TableCell>)}
+            </TableRow>
+          ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
+    </div>
   );
 }
 
